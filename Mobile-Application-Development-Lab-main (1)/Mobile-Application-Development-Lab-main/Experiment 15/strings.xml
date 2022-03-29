@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Spinner</string>
+    <string-array name="movies_array">
+    <item>Maheshinte prathikaram</item>
+    <item>Thondimuthalum dhriksakshiyum</item>
+    <item>Hridayam</item>
+    <item>Lucifer</item>
+    <item>Godha</item>
+    <item>Minnal murali</item>
+    <item>Swathanthryam ardharathriyil</item>
+    <item>Superman</item>
+    </string-array>
+</resources>

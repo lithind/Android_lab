@@ -1,0 +1,21 @@
+public class MainActivity extends AppCompatActivity {
+    private EditText value1;
+    public EditText value2;
+    public TextView result;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        value1 = (EditText) findViewById(R.id.et1);
+        value2 = (EditText) findViewById(R.id.et2);
+        result = (TextView) findViewById(R.id.tv1);
+    }
+        public void add(View view)
+        {
+            int n1=Integer.parseInt(value1.getText().toString());
+            int n2=Integer.parseInt(value2.getText().toString()) ;
+            int sum=n1+n2;
+            result.setText(String.valueOf(sum));
+    }

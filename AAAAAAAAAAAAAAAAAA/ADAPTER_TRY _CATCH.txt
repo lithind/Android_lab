@@ -1,0 +1,30 @@
+class EmptyListException extends Exception{
+     public String toString(){
+         return  "emptyn list exception";
+     }
+    }
+
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        ListView lv=findViewById(R.id.lv1);
+        String[] colors={};
+        ArrayAdapter<String> colorAdapter=new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1,colors);
+        try {
+            if(colorAdapter.getCount()<=0){
+                throw new  EmptyListException();
+            }
+            lv.setAdapter(colorAdapter);
+        }
+        catch (EmptyListException e)
+        {
+            Toast.makeText(this,e.toString(),Toast.LENGTH_LONG).show();
+        }
+
+    }
+}
